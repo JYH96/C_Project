@@ -39,5 +39,28 @@
     <ClCompile Include="참고용.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="무기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="게임만들기 저장용.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="캐릭터.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="8.오목.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="메모장대신사용중.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="무기.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="캐릭터.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,61 +1,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "¹«±â.h"
+#include "Ä³¸¯ÅÍ.h"
 using namespace std;
 
-class Weapon {
-public:
-    int spac = 1;
-    int apm = 1;
 
-    Weapon() {}
-
-    virtual void attack() {
-        cout << "ÁÖ¸Ô - µô·®: " << spac << " ÃÊ´ç " << apm << "È¸ÀÇ °ø°Ý ½Ç½Ã" << endl;
-    }
-};
-
-class Sword : public Weapon {
-public:
-    Sword() {
-        spac = 3;
-        apm = 3;
-    }
-
-    void attack() override {
-        cout << "Âî¸£±â - µô·®: " << spac << " ÃÊ´ç " << apm << "È¸ÀÇ °ø°Ý ½Ç½Ã" << endl;
-    }
-};
-
-class Gun : public Weapon {
-public:
-    Gun() {
-        spac = 10;
-        apm = 1;
-    }
-
-    void attack() override {
-        cout << "ÃÑ½î±â - µô·®: " << spac << " ÃÊ´ç " << apm << "È¸ÀÇ °ø°Ý ½Ç½Ã" << endl;
-    }
-};
-
-class Character {
-public:
-    int hp, level;
-    string name = "Á¹°³";
-    Weapon weapon = Weapon();
-
-    Character(int h = 10, int l = 1) : hp(h), level(l) {}
-
-    void grab(Weapon x) {
-        weapon=x;
-    }
-
-    void losthp(int x) {
-        cout << x << "ÀÇ µ¥¹ÌÁö" << endl;
-        hp -= x;
-    }
-};
 bool fight(Character A, Character B);
 int main() {
     Character player;
@@ -74,38 +24,15 @@ int main() {
     fight(player, ÇÑ·®);
 
     cout << "»õ·Î¿î ¹«±â¸¦ ¾ò¾ú´Ù." << endl;
-    player.weapon = Sword();
+    Weapon* get = new Sword();
+    player.grab(get);
     cout << "Ãß°¡Ã¼·ÂÀ» ¾ò¾ú´Ù." << endl;
     player.hp += 10;
     cout << "Çù°´ µîÀå" << endl;
     Character Çù°´(10, 1);
     Çù°´.name = "Çù°´";
-    Çù°´.weapon = Sword();
+    Çù°´.weapon = new Sword();
     fight(player, Çù°´);
     return 0;
 }
 
-bool fight(Character A, Character B) {
-    while (A.hp > 0 && B.hp > 0) {
-        cout << A.name << "ÀÇ °ø°Ý!!!" << endl;
-        for (int i = 0; i < A.weapon.apm; i++) {
-            A.weapon.attack();
-            B.losthp(A.weapon.spac);
-        }
-        cout << B.name<<"ÀÇ ³²Àº Ã¼·Â: " << B.hp << endl;
-        cout << B.name << "ÀÇ °ø°Ý!!!" << endl;
-        for (int i = 0; i < B.weapon.apm; i++) {
-            B.weapon.attack();
-            A.losthp(B.weapon.spac);
-        }
-        cout << A.name << "ÀÇ ³²Àº Ã¼·Â: " << A.hp << endl;
-    }
-    if (A.hp > B.hp) {
-        cout << A.name << " ½Â¸®" << endl;
-        return true;
-    }
-    else {
-        cout << A.name << " ÆÐ¹è" << endl;
-        return false;
-    }
-}
