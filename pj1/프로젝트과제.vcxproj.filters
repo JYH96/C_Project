@@ -60,6 +60,9 @@
     <ClCompile Include="FileName.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="SFML사용법.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="무기.h">

@@ -19,16 +19,18 @@ int 가로세로대각12체크(vector<vector <int>> board);
 int main() {
 	cout << "10*10 오목 시작" << endl;
 	vector<vector<int>> board;
+
 	for (int i = 0; i < 10; i++) {
-		board.push_back({ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 });
+		board.push_back({ 0,0,0,0,0,0,0,0,0,0 });
 	}
 	bool gameisover = false;
 	bool turn = true;
-
 	int currentX = 0;
 	int currentY = 0;
+
 	char input;
 	string turnplayer;
+
 	while (!gameisover) {
 		system("cls"); // 화면을 지우고 새로 그림
 		turnplayer = (turn == true) ? "1st Player의 턴 " : "2nd Player의 턴 ";
@@ -94,14 +96,15 @@ int main() {
 }
 
 void matrixprint(vector<vector<int>> board, int currentX, int currentY) {
-	
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 10; j++) {
+			string c = (board[i][j] == 0) ? "□" : ((board[i][j] == 1) ? "●" : "○");
 			if (i == currentX && j == currentY) {
-				cout << setw(3) << "{" << board[i][j] << "} " << setw(3);// setw: 현재 위치를 중괄호로 표시 iomanip에서 가져옴
+				cout << setw(3)  <<  "{" << c << "}";// setw: 현재 위치를 중괄호로 표시 iomanip에서 가져옴
 			}
 			else {
-				cout << setw(3) << board[i][j] << setw(3) << " ";
+				cout <<setw(5) <<  c;
+				//cout << setw(3) << c << setw(3) << " ";
 			}
 		}
 		cout << endl << endl;
