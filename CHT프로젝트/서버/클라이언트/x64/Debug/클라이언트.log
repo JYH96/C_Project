@@ -1,0 +1,6 @@
+﻿  클라.cpp
+C:\Users\Administator\Desktop\CHT프로젝트\서버\클라이언트\클라.cpp(73,66): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Administator\Desktop\CHT프로젝트\서버\클라이언트\클라.cpp(87,70): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Administator\Desktop\CHT프로젝트\서버\클라이언트\클라.cpp(91,70): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Administator\Desktop\CHT프로젝트\서버\클라이언트\클라.cpp(114,70): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  클라이언트.vcxproj -> C:\Users\Administator\Desktop\CHT프로젝트\서버\x64\Debug\클라이언트.exe
