@@ -1,1 +1,2 @@
-![image](https://github.com/JYH96/C_Project/assets/143565474/848e6c62-7072-4fe3-9864-586136c5b7c4)
+
+![녹화_2024_02_26_11_26_24_960_AdobeExpress](https://github.com/JYH96/C_Project/assets/143565474/b80b0987-d03f-4f8d-8f97-226063aaef55)
