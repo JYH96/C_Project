@@ -1,2 +1,2 @@
 
-![Uploading 오목 편집본.gif…]()
+![Uploading 오목 편집본 (1).gif…]()
