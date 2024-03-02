@@ -4,6 +4,7 @@
 
 
 힙정렬.cpp)
+
   findmax 재귀하여 node.leff, right중에 큰 게 있으면 서로 key를 바꾼다
   
   left right 비교하여 작은 놈을 왼쪽으로 한다.
